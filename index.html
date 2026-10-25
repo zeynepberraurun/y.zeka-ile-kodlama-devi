@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Zeynep Berra Ürün — Backend Software Developer & Computer Programming Student at Anadolu University specializing in C#, ASP.NET Core, Python, SQL, Docker, and scalable systems." />
+  <meta name="theme-color" content="#050507" />
+  <title>Zeynep Berra Ürün | Backend Software Developer</title>
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip to Content for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Interactive Celestial Starfield Canvas -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- Ambient Nebula / Crimson & Silver Subtle Backlights -->
+  <div class="ambient-glow ambient-glow--silver" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--crimson" aria-hidden="true"></div>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="#top" class="brand-logo" aria-label="Zeynep Berra Ürün Home">
+        <span class="brand-monogram">ZBÜ</span>
+        <span class="brand-divider"></span>
+        <span class="brand-handle">zeynep<span class="crimson-dot">.</span>backend</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Tech Stack</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn--crimson-outline btn--sm">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Connect</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="role-badge">
+            <span class="badge-pulse" aria-hidden="true"></span>
+            <span class="mono-text">BACKEND SOFTWARE DEVELOPER</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-title metallic-shimmer">
+            Zeynep Berra Ürün
+          </h1>
+
+          <p class="hero-subtitle">
+            Backend Software Developer &amp; Computer Programming Student
+          </p>
+
+          <p class="hero-pitch">
+            2nd-year Backend Software Development student at <strong>Anadolu University</strong>, focused on building robust, scalable backend architectures, high-reliability APIs, relational data models, and containerized systems.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn--primary">
+              <span>View Projects</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn--secondary">
+              <span>Contact Me</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Quick Social Links -->
+          <div class="hero-socials" aria-label="Quick social links">
+            <a href="https://github.com/zeynepberraurun" target="_blank" rel="noopener noreferrer" class="social-pill">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>@zeynepberraurun</span>
+            </a>
+
+            <a href="https://www.linkedin.com/search/results/all/?keywords=Zeynep%20Berra%20%C3%9Cr%C3%BCn" target="_blank" rel="noopener noreferrer" class="social-pill">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+              <span>Zeynep Berra Ürün</span>
+            </a>
+
+            <a href="mailto:zeynepberraurun@gmail.com" class="social-pill">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>zeynepberraurun@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Architectural System Telemetry Card -->
+        <div class="hero-visual">
+          <div class="glass-card terminal-card" aria-label="Backend Architecture Profile Summary">
+            <div class="terminal-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span class="dot dot--crimson"></span>
+                <span class="dot dot--silver"></span>
+                <span class="dot dot--dim"></span>
+              </div>
+              <span class="terminal-title">zbu-architecture-node ~ zsh</span>
+              <span class="terminal-badge">ONLINE</span>
+            </div>
+            <div class="terminal-body">
+              <div class="code-line">
+                <span class="code-prompt">$</span>
+                <span class="code-cmd">cat /etc/engineer/profile.json</span>
+              </div>
+              <pre class="code-block"><code>{
+  <span class="code-key">"engineer"</span>: <span class="code-str">"Zeynep Berra Ürün"</span>,
+  <span class="code-key">"role"</span>: <span class="code-str">"Backend Software Developer"</span>,
+  <span class="code-key">"university"</span>: <span class="code-str">"Anadolu University (Year 2)"</span>,
+  <span class="code-key">"core_focus"</span>: [
+    <span class="code-str">"RESTful APIs &amp; MVC Architecture"</span>,
+    <span class="code-str">"Relational Database Modeling"</span>,
+    <span class="code-str">"Containerization &amp; Orchestration"</span>
+  ],
+  <span class="code-key">"runtime"</span>: [<span class="code-str">".NET Core"</span>, <span class="code-str">"Python"</span>, <span class="code-str">"Node.js"</span>],
+  <span class="code-key">"infrastructure"</span>: [<span class="code-str">"Docker"</span>, <span class="code-str">"K8s"</span>, <span class="code-str">"AWS"</span>]
+}</code></pre>
+              <div class="terminal-metrics">
+                <div class="metric-item">
+                  <span class="metric-label">ARCHITECTURE</span>
+                  <span class="metric-value">Clean / Layered</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-label">DATA ENGINE</span>
+                  <span class="metric-value">SQL / EF Core</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-label">DEPLOYMENT</span>
+                  <span class="metric-value">Docker / CI-CD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section about-section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">// 01. SYSTEM OVERVIEW</span>
+          <h2 id="about-heading" class="section-title metallic-shimmer">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card about-narrative">
+            <h3 class="card-subtitle">Engineering Reliable Foundations Behind the Scenes</h3>
+            <p>
+              I am a <strong>2nd-year Computer Programming student at Anadolu University</strong> specializing in Backend Software Development. My work centers on designing and implementing clean server-side systems where performance, maintainability, and data integrity come first.
+            </p>
+            <p>
+              Whether structuring domain models with <strong>C# and ASP.NET Core MVC</strong>, building lightweight microservices with <strong>Python &amp; Flask</strong> or <strong>Node.js</strong>, or optimizing complex queries across <strong>SQL Server</strong> and <strong>MySQL</strong>, I approach every problem with an analytical, systems-first mindset.
+            </p>
+            <p>
+              Beyond application code, I embrace modern DevOps practices—packaging services into reproducible <strong>Docker</strong> containers, orchestrating workloads with <strong>Kubernetes</strong>, and automating delivery through <strong>CI/CD pipelines</strong> on <strong>Linux/WSL</strong> and <strong>AWS</strong>.
+            </p>
+
+            <div class="education-banner">
+              <div class="edu-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div class="edu-details">
+                <span class="edu-degree">Computer Programming (Backend Software Development Focus)</span>
+                <span class="edu-school">Anadolu University &bull; 2nd-Year Student</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-pillars">
+            <article class="glass-card pillar-card">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <div>
+                <h4 class="pillar-title">Scalable Backend &amp; APIs</h4>
+                <p class="pillar-desc">
+                  Designing modular MVC applications and RESTful endpoints with strict separation of concerns, authentication, and predictable error handling.
+                </p>
+              </div>
+            </article>
+
+            <article class="glass-card pillar-card">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="pillar-title">Relational Data Architecture</h4>
+                <p class="pillar-desc">
+                  Crafting normalized schemas, writing performant SQL queries, and managing migrations seamlessly with Entity Framework Core, SQL Server, and MySQL.
+                </p>
+              </div>
+            </article>
+
+            <article class="glass-card pillar-card">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <div>
+                <h4 class="pillar-title">Containerized &amp; Cloud Systems</h4>
+                <p class="pillar-desc">
+                  Bridging development and production using Docker, Kubernetes, CI/CD automation, and AWS cloud infrastructure on Linux/WSL environments.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK & SKILLS SECTION -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">// 02. TECHNICAL ARSENAL</span>
+          <h2 id="skills-heading" class="section-title metallic-shimmer">Tech Stack &amp; Skills</h2>
+          <p class="section-subtitle">
+            Core technologies, frameworks, and infrastructure tools I use to architect and deploy backend systems.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Backend -->
+          <article class="glass-card skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <span class="skill-tier">CORE LAYER</span>
+                <h3 class="skill-category-title">Backend Development</h3>
+              </div>
+            </div>
+            <p class="skill-category-desc">
+              Object-oriented and event-driven server runtimes for enterprise web apps and REST APIs.
+            </p>
+            <ul class="skill-tags" aria-label="Backend technologies">
+              <li class="skill-tag"><span class="tag-dot"></span>C#</li>
+              <li class="skill-tag"><span class="tag-dot"></span>ASP.NET Core MVC</li>
+              <li class="skill-tag"><span class="tag-dot"></span>Python</li>
+              <li class="skill-tag"><span class="tag-dot"></span>Flask</li>
+              <li class="skill-tag"><span class="tag-dot"></span>Node.js</li>
+            </ul>
+          </article>
+
+          <!-- Category 2: Databases -->
+          <article class="glass-card skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="skill-tier">PERSISTENCE LAYER</span>
+                <h3 class="skill-category-title">Databases &amp; ORM</h3>
+              </div>
+            </div>
+            <p class="skill-category-desc">
+              Relational schema design, ACID transactions, indexing, and code-first/database-first ORM workflows.
+            </p>
+            <ul class="skill-tags" aria-label="Database technologies">
+              <li class="skill-tag"><span class="tag-dot"></span>SQL Server</li>
+              <li class="skill-tag"><span class="tag-dot"></span>MySQL</li>
+              <li class="skill-tag"><span class="tag-dot"></span>Entity Framework Core</li>
+            </ul>
+          </article>
+
+          <!-- Category 3: DevOps & Cloud -->
+          <article class="glass-card skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="skill-tier">INFRASTRUCTURE LAYER</span>
+                <h3 class="skill-category-title">DevOps &amp; Cloud</h3>
+              </div>
+            </div>
+            <p class="skill-category-desc">
+              Container orchestration, automated delivery pipelines, cloud hosting, and Linux system administration.
+            </p>
+            <ul class="skill-tags" aria-label="DevOps and Cloud technologies">
+              <li class="skill-tag"><span class="tag-dot"></span>Docker</li>
+              <li class="skill-tag"><span class="tag-dot"></span>Kubernetes</li>
+              <li class="skill-tag"><span class="tag-dot"></span>CI/CD pipelines</li>
+              <li class="skill-tag"><span class="tag-dot"></span>AWS</li>
+              <li class="skill-tag"><span class="tag-dot"></span>Linux/WSL</li>
+            </ul>
+          </article>
+
+          <!-- Category 4: Version Control & Tools -->
+          <article class="glass-card skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="18" r="3"></circle>
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                  <line x1="6" y1="9" x2="6" y2="21"></line>
+                </svg>
+              </div>
+              <div>
+                <span class="skill-tier">WORKFLOW &amp; MANAGEMENT</span>
+                <h3 class="skill-category-title">Version Control &amp; Tools</h3>
+              </div>
+            </div>
+            <p class="skill-category-desc">
+              Collaborative source control, agile backlog &amp; pipeline management, and database administration suites.
+            </p>
+            <ul class="skill-tags" aria-label="Version Control and Tools">
+              <li class="skill-tag"><span class="tag-dot"></span>Git</li>
+              <li class="skill-tag"><span class="tag-dot"></span>GitHub</li>
+              <li class="skill-tag"><span class="tag-dot"></span>Azure DevOps</li>
+              <li class="skill-tag"><span class="tag-dot"></span>SSMS</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">// 03. ARCHITECTURAL WORK</span>
+          <h2 id="projects-heading" class="section-title metallic-shimmer">Featured Projects</h2>
+          <p class="section-subtitle">
+            Selected backend systems, APIs, and containerized architectures built with clean code principles.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="glass-card project-card">
+            <div class="project-card-top">
+              <div class="project-meta">
+                <span class="project-type-badge">ENTERPRISE MVC &amp; REST API</span>
+                <span class="project-arch-tag">N-Tier Architecture</span>
+              </div>
+              <h3 class="project-title">CoreInventory &amp; Order Management Engine</h3>
+              <p class="project-description">
+                A modular enterprise backend engineered with <strong>ASP.NET Core MVC</strong> and <strong>Entity Framework Core</strong>. Implements the Repository and Unit of Work patterns over <strong>SQL Server</strong> for transactional order processing, role-based access control, and automated schema migrations inside <strong>Docker</strong> containers.
+              </p>
+            </div>
+
+            <div class="project-card-bottom">
+              <ul class="project-tech-list" aria-label="Technologies used">
+                <li>C#</li>
+                <li>ASP.NET Core MVC</li>
+                <li>EF Core</li>
+                <li>SQL Server</li>
+                <li>Docker</li>
+                <li>SSMS</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/zeynepberraurun" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>View on GitHub</span>
+                  <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="glass-card project-card">
+            <div class="project-card-top">
+              <div class="project-meta">
+                <span class="project-type-badge">MICROSERVICE API</span>
+                <span class="project-arch-tag">Containerized Service</span>
+              </div>
+              <h3 class="project-title">PulseMetrics Telemetry &amp; Analytics API</h3>
+              <p class="project-description">
+                Lightweight RESTful microservice built with <strong>Python</strong> and <strong>Flask</strong> for ingesting and querying application health logs. Backed by optimized <strong>MySQL</strong> indexing, packaged via multi-stage <strong>Docker</strong> builds, and configured with <strong>Kubernetes</strong> deployment manifests.
+              </p>
+            </div>
+
+            <div class="project-card-bottom">
+              <ul class="project-tech-list" aria-label="Technologies used">
+                <li>Python</li>
+                <li>Flask</li>
+                <li>MySQL</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Linux/WSL</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/zeynepberraurun" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>View on GitHub</span>
+                  <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="glass-card project-card">
+            <div class="project-card-top">
+              <div class="project-meta">
+                <span class="project-type-badge">ASYNC EVENT SERVICE</span>
+                <span class="project-arch-tag">Event-Driven API</span>
+              </div>
+              <h3 class="project-title">NodeRelay Task &amp; Webhook Dispatcher</h3>
+              <p class="project-description">
+                Asynchronous backend service written in <strong>Node.js</strong> designed to schedule, validate, and dispatch outgoing webhooks with exponential backoff retry policies, structured JSON logging, and persistent delivery state tracking in <strong>MySQL</strong>.
+              </p>
+            </div>
+
+            <div class="project-card-bottom">
+              <ul class="project-tech-list" aria-label="Technologies used">
+                <li>Node.js</li>
+                <li>MySQL</li>
+                <li>Docker</li>
+                <li>CI/CD pipelines</li>
+                <li>Git &amp; GitHub</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/zeynepberraurun" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>View on GitHub</span>
+                  <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="glass-card project-card">
+            <div class="project-card-top">
+              <div class="project-meta">
+                <span class="project-type-badge">DEVOPS &amp; CLOUD PIPELINE</span>
+                <span class="project-arch-tag">Automated Delivery</span>
+              </div>
+              <h3 class="project-title">CloudDeploy Automated Container Pipeline</h3>
+              <p class="project-description">
+                End-to-end <strong>CI/CD pipeline</strong> reference architecture utilizing <strong>Azure DevOps</strong> and GitHub Actions to build, test, and push <strong>ASP.NET Core</strong> and <strong>Python</strong> container images to <strong>AWS</strong> with zero-downtime rolling updates on <strong>Kubernetes</strong>.
+              </p>
+            </div>
+
+            <div class="project-card-bottom">
+              <ul class="project-tech-list" aria-label="Technologies used">
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>AWS</li>
+                <li>Azure DevOps</li>
+                <li>CI/CD pipelines</li>
+                <li>C# / .NET</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/zeynepberraurun" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>View on GitHub</span>
+                  <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / CONNECT SECTION -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">// 04. INITIALIZE CONNECTION</span>
+          <h2 id="contact-heading" class="section-title metallic-shimmer">Contact &amp; Connect</h2>
+          <p class="section-subtitle">
+            Interested in collaborating on backend projects, internships, or software engineering opportunities? Reach out directly below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact & Social Cards -->
+          <div class="contact-info-panel">
+            <div class="glass-card email-copy-card">
+              <span class="card-label">DIRECT ELECTRONIC MAIL</span>
+              <div class="email-display-row">
+                <a href="mailto:zeynepberraurun@gmail.com" class="email-address" id="email-text">zeynepberraurun@gmail.com</a>
+                <button type="button" class="btn btn--copy" id="copy-email-btn" aria-label="Copy email address to clipboard">
+                  <svg class="icon icon-copy" id="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <svg class="icon icon-check hidden" id="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span id="copy-btn-label">Copy Email</span>
+                </button>
+              </div>
+              <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
+            </div>
+
+            <div class="social-badges-grid">
+              <a href="https://github.com/zeynepberraurun" target="_blank" rel="noopener noreferrer" class="glass-card social-profile-card">
+                <div class="social-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="social-card-content">
+                  <span class="social-card-platform">GitHub Repositories</span>
+                  <strong class="social-card-handle">@zeynepberraurun</strong>
+                </div>
+                <svg class="social-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+
+              <a href="https://www.linkedin.com/search/results/all/?keywords=Zeynep%20Berra%20%C3%9Cr%C3%BCn" target="_blank" rel="noopener noreferrer" class="glass-card social-profile-card">
+                <div class="social-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                  </svg>
+                </div>
+                <div class="social-card-content">
+                  <span class="social-card-platform">LinkedIn Network</span>
+                  <strong class="social-card-handle">Zeynep Berra Ürün</strong>
+                </div>
+                <svg class="social-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="glass-card availability-card">
+              <div class="availability-header">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span class="availability-title">Current Academic &amp; Career Status</span>
+              </div>
+              <p class="availability-text">
+                2nd-Year Backend Software Development student at <strong>Anadolu University</strong>. Open to backend engineering internships, junior developer roles, and open-source collaborations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Form Interface -->
+          <div class="glass-card contact-form-card">
+            <h3 class="form-card-title">Send a Direct Message</h3>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="sender-name" class="form-label">Name <span class="required-star" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="sender-name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Your full name"
+                  required
+                  autocomplete="name"
+                  aria-describedby="name-error"
+                />
+                <span class="field-error" id="name-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-email" class="form-label">Email <span class="required-star" aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="sender-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="you@domain.com"
+                  required
+                  autocomplete="email"
+                  aria-describedby="email-error"
+                />
+                <span class="field-error" id="email-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-message" class="form-label">Message <span class="required-star" aria-hidden="true">*</span></label>
+                <textarea
+                  id="sender-message"
+                  name="message"
+                  rows="5"
+                  class="form-input form-textarea"
+                  placeholder="Tell me about your project, team, or question..."
+                  required
+                  aria-describedby="message-error"
+                ></textarea>
+                <span class="field-error" id="message-error" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+                <span>Transmit Message</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-crimson-line" aria-hidden="true"></div>
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#top" class="brand-logo">
+          <span class="brand-monogram">ZBÜ</span>
+          <span class="brand-handle">Zeynep Berra Ürün</span>
+        </a>
+        <p class="footer-tagline">
+          Backend Software Developer &amp; Computer Programming Student at Anadolu University.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="#about" class="footer-link">About</a>
+        <a href="#skills" class="footer-link">Tech Stack</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#contact" class="footer-link">Contact</a>
+        <a href="https://github.com/zeynepberraurun" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://www.linkedin.com/search/results/all/?keywords=Zeynep%20Berra%20%C3%9Cr%C3%BCn" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+      </nav>
+
+      <div class="footer-copy">
+        <p>&copy; <span id="current-year">2026</span> Zeynep Berra Ürün. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
